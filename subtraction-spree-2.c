@@ -40,7 +40,7 @@ int main(void)
         printf("Q%d) What is %d - %d - %d?\n>", question_num + 1, num_x, num_y, num_z);
 
         if (poll(&mypoll, 1, 5250)) {
-            scanf("%s", input);
+            scanf("%100s", input);
         } else {
             printf(" *** Too slow!\n");
             score -= penalty_stack;

@@ -36,7 +36,7 @@ int main(void)
         printf("Q%d) What is %d - %d?\n>", question_num + 1, num_x, num_y);
 
         if (poll(&mypoll, 1, 5000)) {
-            scanf("%s", input);
+            scanf("%100s", input);
         } else {
             printf(" *** Too slow!\n");
             continue;
